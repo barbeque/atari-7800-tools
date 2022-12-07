@@ -1,6 +1,7 @@
 """
 Remove the ATARI7800 header from an *.a78 file,
-writing it out as a *.bin file instead.
+writing it out as a *.bin file instead so you can
+burn it to an EPROM.
 
 Based on http://7800.8bitdev.org/index.php/A78_Header_Specification
 
