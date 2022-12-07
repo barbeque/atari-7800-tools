@@ -39,13 +39,14 @@ def has_header(rom):
                     j += 1
     return False # exhausted
 
-print("Has header? ", has_header(binary))
+is_a78_rom = has_header(binary)
+print("Has header? ", is_a78_rom)
 
 # Sure, we could look for it, but let's just hardcode it and call
 # it a day
 HEADER_LENGTH = 0x80
 
-if has_header(binary):
+if is_a78_rom:
     print("Removing header of 128 bytes")
     binary2 = binary[HEADER_LENGTH:]
     assert(len(binary2) == len(binary) - HEADER_LENGTH)
