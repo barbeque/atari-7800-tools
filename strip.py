@@ -47,7 +47,7 @@ print("Has header? ", is_a78_rom)
 HEADER_LENGTH = 0x80
 
 if is_a78_rom:
-    print("Removing header of 128 bytes")
+    print(f"Removing header of {HEADER_LENGTH} bytes")
     binary2 = binary[HEADER_LENGTH:]
     assert(len(binary2) == len(binary) - HEADER_LENGTH)
     binary = binary2
